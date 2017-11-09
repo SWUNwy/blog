@@ -12,5 +12,9 @@ class VisitController extends Controller {
             $this->assign('list',$list);
             $this->display();
 	}
+        
+        public function delete($param) {
+            return $result;
+        }
 
 }
