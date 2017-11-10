@@ -6,11 +6,13 @@
             <file>file:/D:/wamp64/www/blog/Apps/Admin/Controller/BlogController.class.php</file>
             <file>file:/D:/wamp64/www/blog/Apps/Admin/Model/MemberModel.class.php</file>
             <file>file:/D:/wamp64/www/blog/Apps/Admin/Model/CategoryModel.class.php</file>
+            <file>file:/D:/wamp64/www/blog/Apps/Admin/Controller/SystemController.class.php</file>
             <file>file:/D:/wamp64/www/blog/Apps/Admin/Controller/AdminController.class.php</file>
             <file>file:/D:/wamp64/www/blog/Apps/Admin/Model/AdminModel.class.php</file>
             <file>file:/D:/wamp64/www/blog/Apps/Admin/Controller/FeedBackController.class.php</file>
             <file>file:/D:/wamp64/www/blog/Apps/Admin/Controller/InfoController.class.php</file>
             <file>file:/D:/wamp64/www/blog/Apps/Admin/Controller/RuleController.class.php</file>
+            <file>file:/D:/wamp64/www/blog/Apps/Admin/Controller/VisitController.class.php</file>
             <file>file:/D:/wamp64/www/blog/Apps/Admin/Controller/MemberController.class.php</file>
         </group>
     </open-files>
