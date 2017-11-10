@@ -53,3 +53,25 @@ INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
 INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 
+[ 2017-11-11T00:37:47+08:00 ] ::1 /blog/index.php/Admin/Visit/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-11-11T00:37:59+08:00 ] ::1 /blog/index.php/Admin/FeedBack/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 1146:Table 'blog.yr_feedbcak' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `yr_feedbcak`
+
+[ 2017-11-11T00:38:25+08:00 ] ::1 /blog/index.php/Admin/FeedBack/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-11-11T00:38:25+08:00 ] ::1 /blog/index.php/Admin/FeedBack/static/h-ui/images/ucnter/avatar-default-S.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+
