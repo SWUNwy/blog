@@ -10,5 +10,12 @@ use Think\Controller;
  * @author Administrator
  */
 class CommonController extends Controller {
-    //put your code here
+    /**
+     * 
+     */
+    public function __initialize() {
+        if(!isset($_SESSION['uname']) || !isset($_SESSION['uid'])) {
+            $this->redirect('Login/index');
+        }
+    }
 }
