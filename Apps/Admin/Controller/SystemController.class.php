@@ -9,8 +9,8 @@ use Think\Controller;
 class SystemController extends Controller {
     
     public function index() {
-        $list = M('system')->select();
-        $this->assign('list',$list);
+//        $list = M('system')->select();
+//        $this->assign('list',$list);
         $this->display();
     }
 }
