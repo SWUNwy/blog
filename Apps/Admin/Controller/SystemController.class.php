@@ -18,14 +18,16 @@ class SystemController extends Controller {
     
     public function saveInfo() {
         $data = array(
-            'title'      => I('website-title'),
-            'kewords'   => I('website-Keywords'),
-            'description'      => I('website-description'),
-            'copyright'   => I('website-copyright'),
-            'icp'   => I('website-icp')
+            'title'         => I('title'),
+            'keywords'      => I('keywords'),
+            'description'   => I('description'),
+            'copyright'     => I('copyright'),
+            'icp'           => I('icp'),
+            'modified_time' => date('Y-m-d H:i:s')
         );
-        $result = D('System');
-        $result->add($data);
+//        $result = D('System');
+//        $result->addInfo($data);
+        $result = M('system')->add($data);
         if ($result) {
             $this->success('保存成功！');
         } else {

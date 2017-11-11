@@ -43,7 +43,7 @@
                             <span class="c-red">*</span>
                             网站名称：</label>
                         <div class="formControls col-xs-8 col-sm-9">
-                            <input type="text" id="website-title" placeholder="控制在25个字、50个字节以内" value="<?php echo ($vo["title"]); ?>" class="input-text">
+                            <input type="text" id="title" placeholder="控制在25个字、50个字节以内" value="<?php echo ($vo["title"]); ?>" class="input-text">
                         </div>
                     </div>
                     <div class="row cl">
@@ -51,7 +51,7 @@
                             <span class="c-red">*</span>
                             关键词：</label>
                         <div class="formControls col-xs-8 col-sm-9">
-                            <input type="text" id="website-Keywords" placeholder="5个左右,8汉字以内,用英文,隔开" value="<?php echo ($vo["keywords"]); ?>" class="input-text">
+                            <input type="text" id="keywords" placeholder="5个左右,8汉字以内,用英文,隔开" value="<?php echo ($vo["keywords"]); ?>" class="input-text">
                         </div>
                     </div>
                     <div class="row cl">
@@ -59,7 +59,7 @@
                             <span class="c-red">*</span>
                             描述：</label>
                         <div class="formControls col-xs-8 col-sm-9">
-                            <input type="text" id="website-description" placeholder="控制在80个汉字，160个字符以内" value="<?php echo ($vo["description"]); ?>" class="input-text">
+                            <input type="text" id="description" placeholder="控制在80个汉字，160个字符以内" value="<?php echo ($vo["description"]); ?>" class="input-text">
                         </div>
                     </div>
                     <div class="row cl">
@@ -67,13 +67,13 @@
                             <span class="c-red">*</span>
                             底部版权信息：</label>
                         <div class="formControls col-xs-8 col-sm-9">
-                            <input type="text" id="website-copyright" placeholder="Yrui © 2017 " value="<?php echo ($vo["copyright"]); ?>" class="input-text">
+                            <input type="text" id="copyright" placeholder="Yrui © 2017 " value="<?php echo ($vo["copyright"]); ?>" class="input-text">
                         </div>
                     </div>
                     <div class="row cl">
                         <label class="form-label col-xs-4 col-sm-2">备案号：</label>
                         <div class="formControls col-xs-8 col-sm-9">
-                            <input type="text" id="website-icp" placeholder="渝ICP备16010097号-1" value="<?php echo ($vo["icp"]); ?>" class="input-text">
+                            <input type="text" id="icp" placeholder="渝ICP备16010097号-1" value="<?php echo ($vo["icp"]); ?>" class="input-text">
                         </div>
                     </div>
                 </div>
