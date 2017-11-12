@@ -13,8 +13,11 @@ class SystemModel extends Model {
      * @param array     $data   需要保存的数据信息，数组形式
      * @return boolean  $result 返回保存的结果，布尔型
      */
-    public function addInfo($data) {
-        $result = M('system')->save($data);
+    public function addInfo($id,$data) {
+        if (is_array($id)){
+            $sid = 'sid in('.implode(',',$id).')';
+        }
+        $result = M('system')->where($sid)->setField($data);
         return $result;
     }
 }

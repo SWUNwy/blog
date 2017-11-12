@@ -17,6 +17,7 @@ class SystemController extends Controller {
     }
     
     public function saveInfo() {
+        $id = I('id');
         $data = array(
             'title'         => I('title'),
             'keywords'      => I('keywords'),
@@ -25,9 +26,9 @@ class SystemController extends Controller {
             'icp'           => I('icp'),
             'modified_time' => date('Y-m-d H:i:s')
         );
-//        $result = D('System');
-//        $result->addInfo($data);
-        $result = M('system')->add($data);
+        $result = D('System');
+        $result->addInfo($id,$data);
+
         if ($result) {
             $this->success('保存成功！');
         } else {

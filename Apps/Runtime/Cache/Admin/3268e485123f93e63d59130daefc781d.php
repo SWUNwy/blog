@@ -32,7 +32,9 @@
         <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a>
     </nav>
     <div class="page-container">
-        <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><form class="form form-horizontal" id="form-article-add" action="<?php echo U('System/saveInfo');?>" method="post">
+        <!--<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>-->
+        <form class="form form-horizontal" id="form-article-add" action="<?php echo U("System/saveInfo?id=$vo[sid]");?>" method="post">
+            <input name="id[]" id="checkbox" type="hidden" value="<?php echo ($vo["sid"]); ?>">
             <div id="tab-system" class="HuiTab">
                 <div class="tabBar cl">
                     <span>基本设置</span>
@@ -43,7 +45,7 @@
                             <span class="c-red">*</span>
                             网站名称：</label>
                         <div class="formControls col-xs-8 col-sm-9">
-                            <input type="text" id="title" placeholder="控制在25个字、50个字节以内" value="<?php echo ($vo["title"]); ?>" class="input-text">
+                            <input type="text" id="title" name="title" placeholder="控制在25个字、50个字节以内" value="<?php echo ($vo["title"]); ?>" class="input-text">
                         </div>
                     </div>
                     <div class="row cl">
@@ -51,7 +53,7 @@
                             <span class="c-red">*</span>
                             关键词：</label>
                         <div class="formControls col-xs-8 col-sm-9">
-                            <input type="text" id="keywords" placeholder="5个左右,8汉字以内,用英文,隔开" value="<?php echo ($vo["keywords"]); ?>" class="input-text">
+                            <input type="text" id="keywords" name="keywords" placeholder="5个左右,8汉字以内,用英文,隔开" value="<?php echo ($vo["keywords"]); ?>" class="input-text">
                         </div>
                     </div>
                     <div class="row cl">
@@ -59,7 +61,7 @@
                             <span class="c-red">*</span>
                             描述：</label>
                         <div class="formControls col-xs-8 col-sm-9">
-                            <input type="text" id="description" placeholder="控制在80个汉字，160个字符以内" value="<?php echo ($vo["description"]); ?>" class="input-text">
+                            <input type="text" id="description" name="description" placeholder="控制在80个汉字，160个字符以内" value="<?php echo ($vo["description"]); ?>" class="input-text">
                         </div>
                     </div>
                     <div class="row cl">
@@ -67,13 +69,13 @@
                             <span class="c-red">*</span>
                             底部版权信息：</label>
                         <div class="formControls col-xs-8 col-sm-9">
-                            <input type="text" id="copyright" placeholder="Yrui © 2017 " value="<?php echo ($vo["copyright"]); ?>" class="input-text">
+                            <input type="text" id="copyright" name="copyright" placeholder="Yrui © 2017 " value="<?php echo ($vo["copyright"]); ?>" class="input-text">
                         </div>
                     </div>
                     <div class="row cl">
                         <label class="form-label col-xs-4 col-sm-2">备案号：</label>
                         <div class="formControls col-xs-8 col-sm-9">
-                            <input type="text" id="icp" placeholder="渝ICP备16010097号-1" value="<?php echo ($vo["icp"]); ?>" class="input-text">
+                            <input type="text" id="icp" name="icp" placeholder="渝ICP备16010097号-1" value="<?php echo ($vo["icp"]); ?>" class="input-text">
                         </div>
                     </div>
                 </div>
@@ -86,7 +88,8 @@
                     <!--<button onClick="layer_close();" class="btn btn-default radius" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>-->
                 </div>
             </div>
-        </form><?php endforeach; endif; else: echo "" ;endif; ?>
+        </form>
+        <!--<?php endforeach; endif; else: echo "" ;endif; ?>-->
     </div>
 
 <script type="text/javascript" src="/blog/Public/Admin/lib/jquery/1.9.1/jquery.min.js"></script> 
