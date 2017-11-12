@@ -28,53 +28,51 @@
         <span class="c-gray en">&gt;</span>
         系统管理
         <span class="c-gray en">&gt;</span>
-        基本设置
+        邮件配置
         <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a>
     </nav>
     <div class="page-container">
-        <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><form class="form form-horizontal" id="form-article-add" action="<?php echo U("System/saveSysInfo?id=$vo[sid]");?>" method="post">
-            <input name="id[]" id="checkbox" type="hidden" value="<?php echo ($vo["sid"]); ?>">
+        <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><form class="form form-horizontal" id="form-article-add" action="<?php echo U("Email/save?id=$vo[id]");?>" method="post" >
+            <input name="id[]" id="checkbox" type="hidden" value="<?php echo ($vo["id"]); ?>">
             <div id="tab-system" class="HuiTab">
                 <div class="tabBar cl">
-                    <span>基本设置</span>
+                    <span>邮件设置</span>
                 </div>
                 <div class="tabCon">
                     <div class="row cl">
-                        <label class="form-label col-xs-4 col-sm-2">
-                            <span class="c-red">*</span>
-                            网站名称：</label>
+                        <label class="form-label col-xs-4 col-sm-2">邮件协议：</label>
                         <div class="formControls col-xs-8 col-sm-9">
-                            <input type="text" id="title" name="title" placeholder="控制在25个字、50个字节以内" value="<?php echo ($vo["title"]); ?>" class="input-text">
+                            <input type="text" id="protocol" name="protocl" value="<?php echo ($vo["protocol"]); ?>" class="input-text">
                         </div>
                     </div>
                     <div class="row cl">
-                        <label class="form-label col-xs-4 col-sm-2">
-                            <span class="c-red">*</span>
-                            关键词：</label>
+                        <label class="form-label col-xs-4 col-sm-2">SMTP服务器主机：</label>
                         <div class="formControls col-xs-8 col-sm-9">
-                            <input type="text" id="keywords" name="keywords" placeholder="5个左右,8汉字以内,用英文,隔开" value="<?php echo ($vo["keywords"]); ?>" class="input-text">
+                            <input type="text" id="host" name="host" value="<?php echo ($vo["host"]); ?>" class="input-text">
                         </div>
                     </div>
                     <div class="row cl">
-                        <label class="form-label col-xs-4 col-sm-2">
-                            <span class="c-red">*</span>
-                            描述：</label>
+                        <label class="form-label col-xs-4 col-sm-2">SMTP用户：</label>
                         <div class="formControls col-xs-8 col-sm-9">
-                            <input type="text" id="description" name="description" placeholder="控制在80个汉字，160个字符以内" value="<?php echo ($vo["description"]); ?>" class="input-text">
+                            <input type="text" id="user" name="user" value="<?php echo ($vo["user"]); ?>" class="input-text">
                         </div>
                     </div>
                     <div class="row cl">
-                        <label class="form-label col-xs-4 col-sm-2">
-                            <span class="c-red">*</span>
-                            底部版权信息：</label>
+                        <label class="form-label col-xs-4 col-sm-2">SMTP 端口：</label>
                         <div class="formControls col-xs-8 col-sm-9">
-                            <input type="text" id="copyright" name="copyright" placeholder="Yrui © 2017 " value="<?php echo ($vo["copyright"]); ?>" class="input-text">
+                            <input type="text" id="port" name="port" value="<?php echo ($vo["port"]); ?>" class="input-text">
                         </div>
                     </div>
                     <div class="row cl">
-                        <label class="form-label col-xs-4 col-sm-2">备案号：</label>
+                        <label class="form-label col-xs-4 col-sm-2">邮箱帐号：</label>
                         <div class="formControls col-xs-8 col-sm-9">
-                            <input type="text" id="icp" name="icp" placeholder="渝ICP备16010097号-1" value="<?php echo ($vo["icp"]); ?>" class="input-text">
+                            <input type="text" id="account" name="account" value="<?php echo ($vo["account"]); ?>" class="input-text">
+                        </div>
+                    </div>
+                    <div class="row cl">
+                        <label class="form-label col-xs-4 col-sm-2">邮箱密码：</label>
+                        <div class="formControls col-xs-8 col-sm-9">
+                            <input type="password" id="pwd" name="pwd" value="<?php echo ($vo["pwd"]); ?>" class="input-text">
                         </div>
                     </div>
                 </div>
@@ -83,12 +81,10 @@
             </div>
             <div class="row cl">
                 <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
-                    <button onClick="" class="btn btn-primary radius" type="submit"><i class="Hui-iconfont">&#xe632;</i> 保存</button>
-                    <!--<button onClick="layer_close();" class="btn btn-default radius" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>-->
+                    <button onClick="article_save_submit();" class="btn btn-primary radius" type="submit"><i class="Hui-iconfont">&#xe632;</i> 保存</button>
                 </div>
             </div>
-        </form>
-        <!--<?php endforeach; endif; else: echo "" ;endif; ?>-->
+        </form><?php endforeach; endif; else: echo "" ;endif; ?>
     </div>
 
 <script type="text/javascript" src="/blog/Public/Admin/lib/jquery/1.9.1/jquery.min.js"></script> 
@@ -104,16 +100,16 @@
 <script type="text/javascript" src="/blog/Public/Admin/lib/jquery.validation/1.14.0/validate-methods.js"></script>
 <script type="text/javascript" src="/blog/Public/Admin/lib/jquery.validation/1.14.0/messages_zh.js"></script>
 <script type="text/javascript">
-                        $(function () {
-                            $('.skin-minimal input').iCheck({
-                                checkboxClass: 'icheckbox-blue',
-                                radioClass: 'iradio-blue',
-                                increaseArea: '20%'
-                            });
-                            $("#tab-system").Huitab({
-                                index: 0
-                            });
-                        });
+                                    $(function () {
+                                        $('.skin-minimal input').iCheck({
+                                            checkboxClass: 'icheckbox-blue',
+                                            radioClass: 'iradio-blue',
+                                            increaseArea: '20%'
+                                        });
+                                        $("#tab-system").Huitab({
+                                            index: 0
+                                        });
+                                    });
 </script>
 <!--/请在上方写此页面业务相关的脚本-->
 </body>

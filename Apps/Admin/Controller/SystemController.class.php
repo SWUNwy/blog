@@ -16,7 +16,7 @@ class SystemController extends Controller {
         $this->display();
     }
     
-    public function saveInfo() {
+    public function saveSysInfo() {
         $id = I('id');
         $data = array(
             'title'         => I('title'),
@@ -27,7 +27,7 @@ class SystemController extends Controller {
             'modified_time' => date('Y-m-d H:i:s')
         );
         $result = D('System');
-        $result->addInfo($id,$data);
+        $result->saveSysInfo($id,$data);
 
         if ($result) {
             $this->success('保存成功！');
@@ -35,4 +35,6 @@ class SystemController extends Controller {
             $this->error("保存失败！");
         }
     }
+    
+
 }

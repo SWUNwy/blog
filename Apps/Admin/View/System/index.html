@@ -10,8 +10,8 @@
         <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a>
     </nav>
     <div class="page-container">
-        <!--<volist name='list' id='vo'>-->
-        <form class="form form-horizontal" id="form-article-add" action="{:U("System/saveInfo?id=$vo[sid]")}" method="post">
+        <volist name='list' id='vo'>
+        <form class="form form-horizontal" id="form-article-add" action="{:U("System/saveSysInfo?id=$vo[sid]")}" method="post">
             <input name="id[]" id="checkbox" type="hidden" value="{$vo.sid}">
             <div id="tab-system" class="HuiTab">
                 <div class="tabBar cl">
