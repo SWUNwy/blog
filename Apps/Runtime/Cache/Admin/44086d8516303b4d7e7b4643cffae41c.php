@@ -42,7 +42,7 @@
                     <div class="row cl">
                         <label class="form-label col-xs-4 col-sm-2">邮件协议：</label>
                         <div class="formControls col-xs-8 col-sm-9">
-                            <input type="text" id="protocol" name="protocl" value="<?php echo ($vo["protocol"]); ?>" class="input-text">
+                            <input type="text" id="protocol" name="protocol" value="<?php echo ($vo["protocol"]); ?>" class="input-text">
                         </div>
                     </div>
                     <div class="row cl">
