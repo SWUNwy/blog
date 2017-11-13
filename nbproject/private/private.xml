@@ -3,7 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/wamp64/www/blog/Apps/Admin/View/System/index.html</file>
+            <file>file:/D:/wamp64/www/blog/Apps/Admin/View/Default/_menu.html</file>
+            <file>file:/D:/wamp64/www/blog/Apps/Admin/Controller/EmailController.class.php</file>
+            <file>file:/D:/wamp64/www/blog/Apps/Admin/View/Email/index.html</file>
+            <file>file:/D:/wamp64/www/blog/Apps/Admin/Model/EmailModel.class.php</file>
         </group>
     </open-files>
 </project-private>
