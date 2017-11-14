@@ -10,5 +10,12 @@ use Think\Controller;
  * @author Administrator
  */
 class DbController extends Controller {
-    //put your code here
+    
+    public function index() {
+        $list = M()->query($sql = 'show tables');
+//        p($list);
+//        die();
+        $this->assign('list',$list);
+        $this->display();
+    }
 }

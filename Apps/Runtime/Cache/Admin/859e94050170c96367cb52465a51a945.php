@@ -141,7 +141,7 @@
                 <ul>
                     <li><a data-href="<?php echo U('System/index');?>" data-title="系统设置" href="javascript:void(0)">系统设置</a></li>
                     <li><a data-href="<?php echo U('Email/index');?>" data-title="邮件配置" href="javascript:void(0)">邮件配置</a></li>
-                    <li><a data-href="<?php echo U('System/data');?>" data-title="数据字典" href="javascript:void(0)">数据字典</a></li>
+                    <li><a data-href="<?php echo U('Db/index');?>" data-title="数据字典" href="javascript:void(0)">数据字典</a></li>
                 </ul>
             </dd>
         </dl>

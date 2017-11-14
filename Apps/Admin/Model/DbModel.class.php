@@ -10,5 +10,5 @@ use Think\Model;
  * @author Administrator
  */
 class DbModel extends Model {
-    //put your code here
+
 }
