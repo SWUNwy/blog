@@ -7,7 +7,7 @@ use Think\Controller;
 class MemberController extends Controller {
 
     public function index() {
-        $list = M('member')->select();
+        $list = M()->select();
         $count = count($list);
         $this->assign('count',$count);
         $this->assign('list',$list);
